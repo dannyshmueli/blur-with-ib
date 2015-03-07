@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anyimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="efh-19-Ih5">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="W9S-Hj-sLS"/>
+                                    <constraint firstAttribute="width" constant="300" id="cAh-DG-6AU"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWj-Ja-hgQ" userLabel="Blur Visual Effect View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tsb-XN-5ic">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyy-dz-koK" userLabel="Vibrancy Visual Effect View">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xqq-v2-5qN">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOM-Xe-xeF" userLabel="Vibrant Background">
+                                                        <rect key="frame" x="150" y="274" width="300" height="52"/>
+                                                        <color key="backgroundColor" white="0.32342657342657349" alpha="0.17999999999999999" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="10R-uc-pzK"/>
+                                                            <constraint firstAttribute="height" constant="52" id="nQj-06-9Vf"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="BOM-Xe-xeF" secondAttribute="centerY" id="U6z-38-52M"/>
+                                                    <constraint firstAttribute="centerX" secondItem="BOM-Xe-xeF" secondAttribute="centerX" id="gJl-gc-upp"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="dark"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vibrancy BG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJJ-jG-qeR" userLabel="Vibrancy BG Here">
+                                            <rect key="frame" x="190" y="277" width="220" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="0O4-YP-9yL"/>
+                                                <constraint firstAttribute="width" constant="220" id="WIH-WV-yYt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aU4-QG-ibZ" userLabel="Non Vibrant Background">
+                                            <rect key="frame" x="150" y="334" width="300" height="52"/>
+                                            <color key="backgroundColor" white="0.32342657339999997" alpha="0.17999999999999999" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="BHe-Ip-GaK"/>
+                                                <constraint firstAttribute="height" constant="52" id="xrh-np-1Pd"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Vibrancy BG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQs-xm-XV4" userLabel="Vibrancy BG Here">
+                                            <rect key="frame" x="190" y="337" width="220" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="220" id="Sp3-FL-4v5"/>
+                                                <constraint firstAttribute="height" constant="46" id="txP-Iq-Hnx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="wQs-xm-XV4" secondAttribute="centerY" constant="-60" id="65U-d6-tFs"/>
+                                        <constraint firstAttribute="centerY" secondItem="pJJ-jG-qeR" secondAttribute="centerY" id="9Rh-zs-0sF"/>
+                                        <constraint firstAttribute="centerY" secondItem="aU4-QG-ibZ" secondAttribute="centerY" constant="-60" id="CIg-ey-7ab"/>
+                                        <constraint firstItem="eyy-dz-koK" firstAttribute="top" secondItem="Tsb-XN-5ic" secondAttribute="top" id="J1t-mW-XdC"/>
+                                        <constraint firstAttribute="bottom" secondItem="eyy-dz-koK" secondAttribute="bottom" id="Kcz-bv-2YB"/>
+                                        <constraint firstAttribute="centerX" secondItem="aU4-QG-ibZ" secondAttribute="centerX" id="REo-hk-BPF"/>
+                                        <constraint firstAttribute="trailing" secondItem="eyy-dz-koK" secondAttribute="trailing" id="UgU-3j-P7m"/>
+                                        <constraint firstAttribute="centerX" secondItem="pJJ-jG-qeR" secondAttribute="centerX" id="V7E-RY-81r"/>
+                                        <constraint firstItem="eyy-dz-koK" firstAttribute="leading" secondItem="Tsb-XN-5ic" secondAttribute="leading" id="Wps-Ye-BLk"/>
+                                        <constraint firstAttribute="centerX" secondItem="wQs-xm-XV4" secondAttribute="centerX" id="ZPY-cx-I0G"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cWj-Ja-hgQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Jeb-Hu-qVd"/>
+                            <constraint firstAttribute="trailing" secondItem="cWj-Ja-hgQ" secondAttribute="trailing" id="XCy-f7-KNB"/>
+                            <constraint firstAttribute="centerX" secondItem="efh-19-Ih5" secondAttribute="centerX" id="ck0-1x-xUe"/>
+                            <constraint firstAttribute="centerY" secondItem="efh-19-Ih5" secondAttribute="centerY" id="eVy-EM-JPB"/>
+                            <constraint firstItem="cWj-Ja-hgQ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="l2y-UI-GIn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cWj-Ja-hgQ" secondAttribute="bottom" id="y81-ET-Bdj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="anyimage.jpg" width="512" height="306"/>
+    </resources>
+</document>
